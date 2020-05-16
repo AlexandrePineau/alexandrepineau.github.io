@@ -7,12 +7,9 @@ h1, h2{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-h2{
-
-}
-
 p{
     text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .main{
@@ -22,13 +19,9 @@ p{
     border-radius: 10px;
 }
 
-.theForm{
-
-}
-
 #preview{
-    width: 50%;
-    height: 50%;
+    width: 30%;
+    height: 30%;
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -38,8 +31,25 @@ p{
 
 #preview:hover{
     border: 2px solid #858585;
-    width: 52%;
-    height: 52%;
+    width: 31%;
+    height: 31%;
+}
+
+.theForm{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+label{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#survey{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
 }
 
 .footer{
