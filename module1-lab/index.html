@@ -19,23 +19,23 @@
 
             <!--The form-->
             <div class="theForm">
-                <h2>
+                <h1>
                     The Survey
-                </h2>
+                </h1>
                 <form id="survey">
                     <!--Question 1-->
-                    <label for="overview">Briefly describe your impression of this website</label></br>
-                    <textarea id="overview" rows="8" cols="40"></textarea>
+                    <label for="overview">1. Briefly describe your impression of this website</label></br></br>
+                    <textarea id="overview" rows="8" cols="40"></textarea></br></br>
 
                     <!--Question 2-->
-                    <p>Do you like the colour choices of this website?</p>
+                    <p>2. Do you like the colour choices of this website?</p>
                     <label for="yes">Yes</label>
                     <label for="no">No</label></br>
                     <input type="radio" id="yes" value="yes" name="colour">
-                    <input type="radio" id="no" value="no" name="colour"></br>
+                    <input type="radio" id="no" value="no" name="colour"></br></br></br>
 
                     <!--Question 3-->
-                    <label for="goals">Of the listed UI design goals, which one is most predominant on Bitcoin's website?</label></br>
+                    <label for="goals">3. Of the listed UI design goals, which one is most predominant on Bitcoin's website?</label></br></br>
                     <select id="goals" name="goals">
                         <option value="functionality">Functionality</option>
                         <option value="coherence">Coherence</option>
@@ -43,10 +43,10 @@
                         <option value="usability">Usability</option>
                         <option value="reliability">Reliability</option>
                         <option value="dataIntegrity">Data Integrity</option>
-                    </select></br>
+                    </select></br></br></br>
 
                     <!--Question 4-->
-                    <p>Select the UI design goals that you think should be improved on Bitcoin's website</p>
+                    <p>4. Select the UI design goals that you think should be improved on Bitcoin's website</p>
                     <input type="checkbox" id="functionality" value="functionality">
                     <label for="functionality">Functionality</label>
                     <input type="checkbox" id="coherence" value="coherence">
@@ -58,11 +58,27 @@
                     <input type="checkbox" id="reliability" value="reliability">
                     <label for="reliability">Reliability</label>
                     <input type="checkbox" id="dataIntegrity" value="dataIntegrity">
-                    <label for="dataIntegrity">Data Integrity</label></br>
+                    <label for="dataIntegrity">Data Integrity</label></br></br></br>
+
+                    <!--Question 5-->
+                    <label for="comments">5. Place any additional comments below</label></br></br>
+                    <textarea id="comments" rows="8" cols="40"></textarea></br></br></br>
+
+                    <!--Question 6-->
+                    <p>6. To what degree do you agree with the following statement? </br>
+                    "Overall, I find this website to be tasteful"</p>
+                    <label for="stronglyagree">Strongly Agree</label>
+                    <input type="radio" id="stronglyagree" value="stronglyagree" name="taste"></br>
+                    <label for="agree">Agree</label>
+                    <input type="radio" id="agree" value="agree" name="taste"></br>
+                    <label for="disagree">Disagree</label>
+                    <input type="radio" id="disagree" value="disagree" name="taste"></br>
+                    <label for="stronglydisagree">Strongly Disagree</label>
+                    <input type="radio" id="stronglydisagree" value="stronglydisagree" name="taste"></br></br></br>
 
                     <!--Submit button-->
                     <input type="submit" value="Submit your survey">
-                </form></br></br>
+                </form></br>
             </div>
             <footer>
                 <p class="footer">

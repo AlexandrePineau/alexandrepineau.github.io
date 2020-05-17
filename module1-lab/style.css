@@ -7,16 +7,20 @@ h1, h2{
     font-family: Arial, Helvetica, sans-serif;
 }
 
-p{
+p, label{
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
 }
 
 .main{
     background-color: #b6b6b6;
-    margin: 5px;
-    padding: 5px;
-    border-radius: 10px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%;
+    padding: 10px;
+    border-radius: 20px;
 }
 
 #preview{
@@ -26,7 +30,7 @@ p{
     margin-right: auto;
     display: block;
     border: 2px solid black;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 #preview:hover{
@@ -38,11 +42,10 @@ p{
 .theForm{
     margin-left: auto;
     margin-right: auto;
-    display: block;
-}
-
-label{
-    font-family: Arial, Helvetica, sans-serif;
+    width: 70%;
+    background-color: white;
+    padding: 10px;
+    border-radius: 20px;
 }
 
 #survey{
