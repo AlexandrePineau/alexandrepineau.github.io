@@ -25,14 +25,14 @@
                 <form id="survey">
                     <!--Question 1-->
                     <label for="overview">1. Briefly describe your impression of this website</label></br></br>
-                    <textarea id="overview" rows="8" cols="40"></textarea></br></br>
+                    <textarea id="overview" rows="8" cols="40"></textarea></br></br></br></br>
 
                     <!--Question 2-->
                     <p>2. Do you like the colour choices of this website?</p>
-                    <label for="yes">Yes</label>
-                    <label for="no">No</label></br>
-                    <input type="radio" id="yes" value="yes" name="colour">
-                    <input type="radio" id="no" value="no" name="colour"></br></br></br>
+                    <label for="yes" style="margin-left: 10px; margin-right: 10px">Yes</label>
+                    <label for="no" style="margin-left: 10px; margin-right: 10px">No</label></br>
+                    <input type="radio" id="yes" value="yes" name="colour" style="margin-left: 10px; margin-right: 10px">
+                    <input type="radio" id="no" value="no" name="colour" style="margin-left: 10px; margin-right: 10px"></br></br></br></br>
 
                     <!--Question 3-->
                     <label for="goals">3. Of the listed UI design goals, which one is most predominant on Bitcoin's website?</label></br></br>
@@ -43,26 +43,28 @@
                         <option value="usability">Usability</option>
                         <option value="reliability">Reliability</option>
                         <option value="dataIntegrity">Data Integrity</option>
-                    </select></br></br></br>
+                    </select></br></br></br></br>
 
                     <!--Question 4-->
-                    <p>4. Select the UI design goals that you think should be improved on Bitcoin's website</p>
-                    <input type="checkbox" id="functionality" value="functionality">
+                    <p>4. Select all the UI design goals that you think could be improved on Bitcoin's website</p>
+
                     <label for="functionality">Functionality</label>
-                    <input type="checkbox" id="coherence" value="coherence">
+                    <input type="checkbox" id="functionality" value="functionality"></br>
                     <label for="coherence">Coherence</label>
-                    <input type="checkbox" id="efficiency" value="efficiency">
+                    <input type="checkbox" id="coherence" value="coherence"></br>
                     <label for="efficiency">Efficiency</label>
-                    <input type="checkbox" id="usability" value="usability">
+                    <input type="checkbox" id="efficiency" value="efficiency"></br>
                     <label for="usability">Usability</label>
-                    <input type="checkbox" id="reliability" value="reliability">
+                    <input type="checkbox" id="usability" value="usability"></br>
                     <label for="reliability">Reliability</label>
-                    <input type="checkbox" id="dataIntegrity" value="dataIntegrity">
-                    <label for="dataIntegrity">Data Integrity</label></br></br></br>
+                    <input type="checkbox" id="reliability" value="reliability"></br>
+
+                    <label for="dataIntegrity">Data Integrity</label>
+                    <input type="checkbox" id="dataIntegrity" value="dataIntegrity"></br></br></br></br>
 
                     <!--Question 5-->
                     <label for="comments">5. Place any additional comments below</label></br></br>
-                    <textarea id="comments" rows="8" cols="40"></textarea></br></br></br>
+                    <textarea id="comments" rows="8" cols="40"></textarea></br></br></br></br>
 
                     <!--Question 6-->
                     <p>6. To what degree do you agree with the following statement? </br>
@@ -74,7 +76,7 @@
                     <label for="disagree">Disagree</label>
                     <input type="radio" id="disagree" value="disagree" name="taste"></br>
                     <label for="stronglydisagree">Strongly Disagree</label>
-                    <input type="radio" id="stronglydisagree" value="stronglydisagree" name="taste"></br></br></br>
+                    <input type="radio" id="stronglydisagree" value="stronglydisagree" name="taste"></br></br></br></br>
 
                     <!--Submit button-->
                     <input type="submit" value="Submit your survey">
