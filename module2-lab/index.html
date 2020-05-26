@@ -6,6 +6,14 @@
 </head>
 
 <body>
+  <div class="storenames">
+    <h1 id="storename">
+      E-Groceries
+    </h1>
+    <h2 id="slogan">
+      Shop 'till your internet drops!
+    </h2>
+  </div>
 
 <!-- Tab links, each one with an onclick event associated with it -->
 <div class="tab">
@@ -22,8 +30,9 @@
 	<select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
 	<option value=""></option>
 	<option value="Vegetarian">Vegetarian</option>
-    <option value="GlutenFree">GlutenFree</option>
-    <option value="None">None</option>
+  <option value="GlutenFree">GlutenFree</option>
+  <option value="GFV">GlutenFree and Vegetarian</option>
+  <option value="None">None</option>
 	</select>
 </div>
 

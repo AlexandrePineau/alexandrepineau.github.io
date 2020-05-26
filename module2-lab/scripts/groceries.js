@@ -1,6 +1,6 @@
-	
+
 // Array of products, each product is an object with different fieldset
-// A set of ingredients should be added to products		 
+// A set of ingredients should be added to products
 
 var products = [
 	{
@@ -9,20 +9,71 @@ var products = [
 		glutenFree: true,
 		price: 1.99
 	},
+
+	{
+		name: "carrot",
+		vegetarian: true,
+		glutenFree: true,
+		price: 2.39
+	},
+
+	{
+		name: "onion",
+		vegetarian: true,
+		glutenFree: true,
+		price: 2.09
+	},
+
+	{
+		name: "salt",
+		vegetarian: true,
+		glutenFree: true,
+		price: 4.68
+	},
+
 	{
 		name: "bread",
 		vegetarian: true,
 		glutenFree: false,
 		price: 2.35
 	},
+
+	{
+		name: "oats",
+		vegetarian: true,
+		glutenFree: false,
+		price: 4.11
+	},
+
+	{
+		name: "penne pasta",
+		vegetarian: true,
+		glutenFree: false,
+		price: 3.55
+	},
+
 	{
 		name: "salmon",
 		vegetarian: false,
 		glutenFree: true,
 		price: 10.00
-	}
+	},
+
+	{
+		name: "cheese",
+		vegetarian: false,
+		glutenFree: true,
+		price:7.08
+	},
+
+	{
+		name: "steak",
+		vegetarian: false,
+		glutenFree: true,
+		price:12.61
+	},
 ];
-	
+
 
 
 // given restrictions provided, make a reduced list of products
@@ -38,6 +89,9 @@ function restrictListProducts(prods, restriction) {
 			product_names.push(prods[i].name);
 		}
 		else if (restriction == "None"){
+			product_names.push(prods[i].name);
+		}
+		else if((restriction == "GFV") && (prods[i].glutenFree == true && prods[i].vegetarian == true)){
 			product_names.push(prods[i].name);
 		}
 	}
