@@ -26,21 +26,21 @@
 <!-- Tab content -->
 <div id="Client" class="tabcontent">
   <h3>Client Information</h3>
-  <p>Tell us a bit about you.</p>
-	Choose a Category:
+  <p>Tell us about yourself</p>
+	Which kinds of foods would you like to be shown:
 	<select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
 	<option value=""></option>
 	<option value="Vegetarian">Vegetarian</option>
   <option value="GlutenFree">GlutenFree</option>
   <option value="GFV">GlutenFree and Vegetarian</option>
   <option value="Organic">Organic</option>
-  <option value="None">None</option>
+  <option value="None">Any</option>
 	</select>
 </div>
 
 <div id="Products" class="tabcontent">
   <h3>Your targeted products</h3>
-  <p>We preselected products based on your restrictions.</p>
+  <p>Here are some foods according to your prefferences</p>
 	 Choose items to buy:
 	 <div id="displayProduct"></div>
 	 <button id="addCart" type="button" class="block" onclick="selectedItems()">
@@ -50,7 +50,7 @@
 
 <div id="Cart" class="tabcontent">
   <h3>Cart</h3>
-  <p>Here is your cart.</p>
+  <p>Here are the items in your cart</p>
   <div id="displayCart"></div>
 </div>
 
@@ -63,6 +63,23 @@
 
 <script src="scripts/groceries.js"></script>
 <script src="scripts/main.js"></script>
+
+<!--
+  SOURCES USED FOR THE IMAGES:
+  brocoli:  https://www.walmart.ca/en/ip/broccoli-stalks/6000016950304
+  onion: https://www.walmart.ca/en/ip/onion-white/6000196795031
+  bread: https://butterwithasideofbread.com/white-bread-recipe/
+  carrot: https://www.nutritionletter.tufts.edu/general-nutrition/are-you-seeing-all-the-health-benefits-of-carrots
+  organic tomatoes: https://www.iga.net/en/product/red-cluster-tomatoeson-the-vine/00000_000000000000004664
+  penne pasta: https://www.walmart.com/ip/Barilla-Classic-Blue-Box-Pasta-Penne-16-oz/10309178
+  organic bannans: https://www.livescience.com/45005-banana-nutrition-facts.html
+  oats: https://www.hsph.harvard.edu/nutritionsource/food-features/oats/
+  salt: https://www.koshercityplus.com/table-salt.html
+  organic yogurt: https://www.loblaws.ca/Food/Natural-%26-Organic/Dairy-%26-Eggs---Natural-%26-Organic/Yogurt/Olympic-Organic-Yogurt%2C-Plain/p/20001888_EA
+  cheese: https://www.ecosystemmarketplace.com/articles/shades-of-reddnesting-a-good-or-bad-piece-of-swiss-cheese/
+  salmon: https://www.freepik.com/free-photo/raw-salmon-meat_3568678.htm
+  steak: https://parade.com/595793/marilynvossavant/black-eyes-and-raw-meat/
+-->
 
 </body>
 </html>

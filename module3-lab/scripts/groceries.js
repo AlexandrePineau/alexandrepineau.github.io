@@ -8,7 +8,8 @@ var products = [
 		vegetarian: true,
 		glutenFree: true,
 		organic: false,
-		price: 1.99
+		price: 1.99,
+		img: "brocoli.jpg"
 	},
 
 	{
@@ -16,7 +17,8 @@ var products = [
 		vegetarian: true,
 		glutenFree: true,
 		organic: false,
-		price: 2.39
+		price: 2.39,
+		img: "carrot.jpg"
 	},
 
 	{
@@ -24,7 +26,8 @@ var products = [
 		vegetarian: true,
 		glutenFree: true,
 		organic: false,
-		price: 2.09
+		price: 2.09,
+		img: "onion.jpg"
 	},
 
 	{
@@ -32,7 +35,8 @@ var products = [
 		vegetarian: true,
 		glutenFree: true,
 		organic: false,
-		price: 4.68
+		price: 4.68,
+		img: "salt.jpg"
 	},
 
 	{
@@ -40,7 +44,8 @@ var products = [
 		vegetarian: true,
 		glutenFree: false,
 		organic: false,
-		price: 2.35
+		price: 2.35,
+		img: "bread.jpg"
 	},
 
 	{
@@ -48,7 +53,8 @@ var products = [
 		vegetarian: true,
 		glutenFree: false,
 		organic: false,
-		price: 4.11
+		price: 4.11,
+		img: "oats.jpg"
 	},
 
 	{
@@ -56,7 +62,8 @@ var products = [
 		vegetarian: true,
 		glutenFree: false,
 		organic: false,
-		price: 3.55
+		price: 3.55,
+		img: "penne.jpeg"
 	},
 
 	{
@@ -64,7 +71,8 @@ var products = [
 		vegetarian: false,
 		glutenFree: true,
 		organic: false,
-		price: 10.00
+		price: 10.00,
+		img: "salmon.jpg"
 	},
 
 	{
@@ -72,7 +80,8 @@ var products = [
 		vegetarian: false,
 		glutenFree: true,
 		organic: false,
-		price:7.08
+		price:7.08,
+		img: "cheese.jpg"
 	},
 
 	{
@@ -80,7 +89,8 @@ var products = [
 		vegetarian: false,
 		glutenFree: true,
 		organic: false,
-		price:12.61
+		price:12.61,
+		img: "steak.jpg"
 	},
 
 	{
@@ -88,7 +98,8 @@ var products = [
 		vegetarian: false,
 		glutenFree: true,
 		organic: true,
-		price:5.44
+		price:5.44,
+		img: "yogurt.jpg"
 	},
 
 	{
@@ -96,7 +107,8 @@ var products = [
 		vegetarian: true,
 		glutenFree: true,
 		organic: true,
-		price:4.03
+		price:4.03,
+		img: "bannas.jpg"
 	},
 
 	{
@@ -104,7 +116,8 @@ var products = [
 		vegetarian: true,
 		glutenFree: true,
 		organic: true,
-		price:3.16
+		price:3.16,
+		img: "tomatoes.jpg"
 	},
 ];
 
