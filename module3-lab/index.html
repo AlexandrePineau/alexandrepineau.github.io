@@ -37,12 +37,12 @@
     <label>Vegetarian</label></br>
     <input type="checkbox" id="Organic">
     <label>Organic</label></br></br>
-    <input class="buttons" type="button" value="Next step" onclick="populateListProductChoices('displayProduct')">
+    <input class="buttons1" type="button" value="Next step" onclick="populateListProductChoices('displayProduct')">
   </form>
 </div>
 
 <div id="Products" class="tabcontent">
-  <button class="buttons" onclick="openInfo('Client')">Previous menu</button>
+  <button class="buttons2" onclick="openInfo('Client')">Previous menu</button>
   <h3>Here are some foods according to your preferences</h3>
   <p>Filter results</p>
   <table>
@@ -58,14 +58,14 @@
     </tr>
   </table>
 	<div id="displayProduct"></div>
-	<button class="buttons" id="addCart" type="button" class="block" onclick="selectedItems()">
+	<button class="buttons1" id="addCart" type="button" class="block" onclick="selectedItems()">
 		Add selected items to cart
   </button>
 
 </div>
 
 <div id="Cart" class="tabcontent">
-  <button class="buttons" onclick="openInfo('Products')">Previous menu</button>
+  <button class="buttons2" onclick="openInfo('Products')">Previous menu</button>
   <h3>Cart</h3>
   <p>Here are the items in your cart</p>
   <div id="displayCart"></div></br>
