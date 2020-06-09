@@ -9,7 +9,7 @@
 <body>
   <div class="storenames">
     <h1 id="storename">
-      <u>E-Groceries</u>
+      <u>E-Grocery Wizard</u>
     </h1>
     <h2 id="slogan">
       <i>Shop 'till your internet drops!</i>
@@ -18,9 +18,9 @@
 
 <!-- Tab links, each one with an onclick event associated with it -->
 <div class="tab">
-  <button class="tablinks" onclick="openInfo(event, 'Client')">Client</button>
-  <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
-  <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
+  <button id="s1" class="tablinks">1. Grocery prefferences</button>
+  <button id="s2" class="tablinks">2. Shop</button>
+  <button id="s3" class="tablinks">3. Review Cart</button>
 </div>
 
 <!-- Tab content -->
@@ -28,27 +28,33 @@
   <h3>Client Information</h3>
   <p>Tell us about yourself</p>
 	Which kinds of foods would you like to be shown:
-	<select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
-	<option value=""></option>
-	<option value="Vegetarian">Vegetarian</option>
-  <option value="GlutenFree">GlutenFree</option>
-  <option value="GFV">GlutenFree and Vegetarian</option>
-  <option value="Organic">Organic</option>
-  <option value="None">Any</option>
-	</select>
+	<form id="dietSelect">
+    <input type="checkbox" id="None">
+    <label>Any</label></br>
+    <input type="checkbox" id="GlutenFree">
+    <label>Gluten Free</label></br>
+    <input type="checkbox" id="Vegetarien">
+    <label>Vegetarian</label></br>
+    <input type="checkbox" id="Organic">
+    <label>Organic</label></br></br>
+    <input class="buttons" type="button" value="Next step" onclick="populateListProductChoices('displayProduct')">
+  </form>
 </div>
 
 <div id="Products" class="tabcontent">
+  <button class="buttons" onclick="openInfo('Client')">Previous menu</button>
   <h3>Your targeted products</h3>
   <p>Here are some foods according to your prefferences</p>
 	 Choose items to buy:
 	 <div id="displayProduct"></div>
-	 <button id="addCart" type="button" class="block" onclick="selectedItems()">
-		Add selected items to cart.
-	</button>
+	 <button class="buttons" id="addCart" type="button" class="block" onclick="selectedItems()">
+		Add selected items to cart
+  </button>
+
 </div>
 
 <div id="Cart" class="tabcontent">
+  <button class="buttons" onclick="openInfo('Products')">Previous menu</button>
   <h3>Cart</h3>
   <p>Here are the items in your cart</p>
   <div id="displayCart"></div>
@@ -82,4 +88,8 @@
 -->
 
 </body>
+<script>
+  //Starts off on client section
+  openInfo('Client');
+</script>
 </html>

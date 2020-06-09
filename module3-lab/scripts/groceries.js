@@ -4,7 +4,7 @@
 
 var products = [
 	{
-		name: "brocoli",
+		name: "broccoli",
 		vegetarian: true,
 		glutenFree: true,
 		organic: false,
@@ -126,7 +126,7 @@ var products = [
 // given restrictions provided, make a reduced list of products
 // prices should be included in this list, as well as a sort based on price
 
-function restrictListProducts(prods, restriction) {
+function restrictListProducts(prods, restrictions) {
 	let product_names = [];
 	//Sort list of products by price
 	for(var i = 0; i < prods.length-1; i++){
@@ -139,22 +139,23 @@ function restrictListProducts(prods, restriction) {
 		}
 	}
 
-
-	for (let i=0; i<prods.length; i+=1) {
-		if ((restriction == "Vegetarian") && (prods[i].vegetarian == true)){
-			product_names.push(prods[i]);
+	if (restrictions[0] == true){
+		for (var j = 0; j<prods.length; j+=1){
+			product_names.push(prods[j]);
 		}
-		else if ((restriction == "GlutenFree") && (prods[i].glutenFree == true)){
-			product_names.push(prods[i]);
-		}
-		else if (restriction == "None"){
-			product_names.push(prods[i]);
-		}
-		else if((restriction == "GFV") && (prods[i].glutenFree == true && prods[i].vegetarian == true)){
-			product_names.push(prods[i]);
-		}
-		else if ((restriction == "Organic") && (prods[i].organic == true)){
-			product_names.push(prods[i]);
+		return product_names;
+	}
+	else{
+		for (let i=0; i<prods.length; i+=1) {
+			if ((restrictions[1] == true) && (prods[i].glutenFree == true)){
+				product_names.push(prods[i]);
+			}
+			else if((restrictions[2] == true) && (prods[i].vegetarian == true)){
+				product_names.push(prods[i]);
+			}
+			else if((restrictions[3] == true) && (prods[i].organic == true)){
+				product_names.push(prods[i]);
+			}
 		}
 	}
 	return product_names;

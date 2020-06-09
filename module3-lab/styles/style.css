@@ -25,11 +25,6 @@
   transition: 0.3s;
 }
 
-/* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: #ddd;
-}
-
 /* Create an active/current tablink class */
 .tab button.active {
   background-color: #ccc;
@@ -80,6 +75,14 @@ body{
 
 *{
   box-sizing: border-box;
+}
+
+.buttons{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20;
+  font-weight: bolder;
+  padding: 5px;
+  margin: 5px;
 }
 
 footer{
