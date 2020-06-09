@@ -142,8 +142,7 @@ function populateListProductChoices(slct2) {
 		// creat the image of the product
 		var picture = document.createElement('img');
 		picture.src = "images/" + optionArray[i].img;
-		picture.width = "300";
-		picture.height = "300";
+		picture.style = "width: 50%; height: 50%";
 		colE.appendChild(picture);
 		colE.appendChild(document.createElement("br"));
 
