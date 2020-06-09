@@ -18,7 +18,7 @@
 
 <!-- Tab links, each one with an onclick event associated with it -->
 <div class="tab">
-  <button id="s1" class="tablinks">1. Grocery prefferences</button>
+  <button id="s1" class="tablinks">1. Your Preferences</button>
   <button id="s2" class="tablinks">2. Shop</button>
   <button id="s3" class="tablinks">3. Review Cart</button>
 </div>
@@ -43,11 +43,22 @@
 
 <div id="Products" class="tabcontent">
   <button class="buttons" onclick="openInfo('Client')">Previous menu</button>
-  <h3>Your targeted products</h3>
-  <p>Here are some foods according to your prefferences</p>
-	 Choose items to buy:
-	 <div id="displayProduct"></div>
-	 <button class="buttons" id="addCart" type="button" class="block" onclick="selectedItems()">
+  <h3>Here are some foods according to your preferences</h3>
+  <p>Filter results</p>
+  <table>
+    <tr>
+      <td><button class="buttons" onclick="sortProds('all')">Show All</button></td>
+      <td><button class="buttons" onclick="sortProds('veg')">Vegetables</button></td>
+      <td><button class="buttons" onclick="sortProds('fruit')">Fruits</button></td>
+      <td><button class="buttons" onclick="sortProds('dairy')">Dairy</button></td>
+      <td><button class="buttons" onclick="sortProds('drink')">Beverages</button></td>
+      <td><button class="buttons" onclick="sortProds('seasoning')">Seasonings</button></td>
+      <td><button class="buttons" onclick="sortProds('meat')">Meats</button></td>
+      <td><button class="buttons" onclick="sortProds('grain')">Grains</button></td>
+    </tr>
+  </table>
+	<div id="displayProduct"></div>
+	<button class="buttons" id="addCart" type="button" class="block" onclick="selectedItems()">
 		Add selected items to cart
   </button>
 
@@ -57,7 +68,10 @@
   <button class="buttons" onclick="openInfo('Products')">Previous menu</button>
   <h3>Cart</h3>
   <p>Here are the items in your cart</p>
-  <div id="displayCart"></div>
+  <div id="displayCart"></div></br>
+  <p>How would you like to pay?</p>
+  <input type="radio" name="pay"><label>Credit Card</label>
+  <input type="radio" name="pay"><label>Paypal</label>
 </div>
 
 <footer>

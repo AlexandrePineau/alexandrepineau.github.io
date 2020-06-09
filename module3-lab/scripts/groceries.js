@@ -9,7 +9,8 @@ var products = [
 		glutenFree: true,
 		organic: false,
 		price: 1.99,
-		img: "brocoli.jpg"
+		img: "brocoli.jpg",
+		type: "veg",
 	},
 
 	{
@@ -18,7 +19,8 @@ var products = [
 		glutenFree: true,
 		organic: false,
 		price: 2.39,
-		img: "carrot.jpg"
+		img: "carrot.jpg",
+		type: "veg"
 	},
 
 	{
@@ -27,7 +29,8 @@ var products = [
 		glutenFree: true,
 		organic: false,
 		price: 2.09,
-		img: "onion.jpg"
+		img: "onion.jpg",
+		type: "veg"
 	},
 
 	{
@@ -36,7 +39,8 @@ var products = [
 		glutenFree: true,
 		organic: false,
 		price: 4.68,
-		img: "salt.jpg"
+		img: "salt.jpg",
+		type: "seasoning"
 	},
 
 	{
@@ -45,7 +49,8 @@ var products = [
 		glutenFree: false,
 		organic: false,
 		price: 2.35,
-		img: "bread.jpg"
+		img: "bread.jpg",
+		type: "grain"
 	},
 
 	{
@@ -54,7 +59,9 @@ var products = [
 		glutenFree: false,
 		organic: false,
 		price: 4.11,
-		img: "oats.jpg"
+		img: "oats.jpg",
+		type: "grain"
+
 	},
 
 	{
@@ -63,7 +70,8 @@ var products = [
 		glutenFree: false,
 		organic: false,
 		price: 3.55,
-		img: "penne.jpeg"
+		img: "penne.jpeg",
+		type: "grain"
 	},
 
 	{
@@ -72,7 +80,8 @@ var products = [
 		glutenFree: true,
 		organic: false,
 		price: 10.00,
-		img: "salmon.jpg"
+		img: "salmon.jpg",
+		type: "meat"
 	},
 
 	{
@@ -81,16 +90,18 @@ var products = [
 		glutenFree: true,
 		organic: false,
 		price:7.08,
-		img: "cheese.jpg"
+		img: "cheese.jpg",
+		type: "dairy"
 	},
 
 	{
-		name: "steak",
+		name: "organic steak",
 		vegetarian: false,
 		glutenFree: true,
-		organic: false,
+		organic: true,
 		price:12.61,
-		img: "steak.jpg"
+		img: "steak.jpg",
+		type: "meat"
 	},
 
 	{
@@ -99,7 +110,8 @@ var products = [
 		glutenFree: true,
 		organic: true,
 		price:5.44,
-		img: "yogurt.jpg"
+		img: "yogurt.jpg",
+		type: "dairy"
 	},
 
 	{
@@ -108,7 +120,8 @@ var products = [
 		glutenFree: true,
 		organic: true,
 		price:4.03,
-		img: "bannas.jpg"
+		img: "bannas.jpg",
+		type: "fruit"
 	},
 
 	{
@@ -117,7 +130,18 @@ var products = [
 		glutenFree: true,
 		organic: true,
 		price:3.16,
-		img: "tomatoes.jpg"
+		img: "tomatoes.jpg",
+		type: "fruit"
+	},
+
+	{
+		name: "iced tea",
+		vegetarian: true,
+		glutenFree: true,
+		organic: false,
+		price: 2.50,
+		img: "icedtea.jpg",
+		type: "drink"
 	},
 ];
 
@@ -139,7 +163,15 @@ function restrictListProducts(prods, restrictions) {
 		}
 	}
 
-	if (restrictions[0] == true){
+	var allFalse = true;
+	for(var k = 0; k < 4; k++){
+		if(restrictions[k] == true){
+			allFalse = false;
+			break;
+		}
+	}
+
+	if (restrictions[0] == true || allFalse == true){
 		for (var j = 0; j<prods.length; j+=1){
 			product_names.push(prods[j]);
 		}
