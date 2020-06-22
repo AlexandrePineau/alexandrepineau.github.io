@@ -129,6 +129,8 @@
                 </div>
                 <div class="card-body">
                     <form>
+                        <!--Appointment details-->
+                        <b>Appointment information</b>
                         <div class="form-group">
                             <label>Choose a service</label>
                             <select class="custom-select">
@@ -140,9 +142,22 @@
                             </select>
                         </div>
                         <div class="form-group">
+                            <label>Do you care to have a particular employee serve you?</label>
+                            <select class="custom-select">
+                                <option></option>
+                                <option>No</option>
+                                <option>Alexandre</option>
+                                <option>Thomas</option>
+                                <option>Jim</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
                             <label>Pick a date and time</label>
                             <input type="datetime-local" class="form-control">
-                        </div>
+                        </div></br></br>
+
+                        <!--Custommer details-->
+                        <b>Your information</b>
                         <div class="form-group">
                             <label>Your full name</label>
                             <input type="text" class="form-control">
@@ -151,6 +166,26 @@
                             <label>Your phone number</label>
                             <input type="text" class="form-control">
                         </div>
+                        <div class="form-group">
+                            <label>Your credit card number</label>
+                            <input type="number" class="form-control">
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Your card's 3 digit security number</label>
+                                    <input type="password" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Your card's experation date</label>
+                                    <input type="date" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+
+
                         <button type="button" class="btn btn-secondary btn-block">Submit</button>
                     </form>
                 </div>
