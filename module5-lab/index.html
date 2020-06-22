@@ -1,6 +1,8 @@
 <html>
     <head>
         <title>SEG 3215 - Module 4</title>
+        <!--CSS LINK-->
+        <link rel="stylesheet" type="text/css" href="style.css">
         <!--BOOTSTRAP CDN-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <!--ICON REPO-->
@@ -152,7 +154,7 @@
                     <form>
                         <!--Appointment details-->
                         <b><i class="fas fa-clipboard-list"></i> Appointment information</b>
-                        <div class="form-group">
+                        <div class="form-group" data-toggle="tooltip" title="What would you like to come in for?">
                             <label>Choose a service</label>
                             <select class="custom-select">
                                 <option></option>
@@ -162,7 +164,7 @@
                                 <option>Tire puncture</option>
                             </select>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group" data-toggle="tooltip" title="Do you have a favourite staff member?">
                             <label>Do you care to have a particular employee serve you?</label>
                             <select class="custom-select">
                                 <option></option>
@@ -172,44 +174,43 @@
                                 <option>Jim</option>
                             </select>
                         </div>
-                        <div class="form-group">
+                        <div class="form-group" data-toggle="tooltip" title="When are you available?">
                             <label>Pick a date and time</label>
                             <input type="datetime-local" class="form-control">
-                        </div></br></br>
+                        </div></br><hr/></br>
 
                         <!--Custommer details-->
                         <b><i class="fas fa-user"></i> Your information</b>
-                        <div class="form-group">
+                        <div class="form-group" data-toggle="tooltip" title="So we know who to expect">
                             <label>Your full name</label>
                             <input type="text" class="form-control">
                         </div>
-                        <div class="form-group">
+                        <div class="form-group" data-toggle="tooltip" title="In case we need to call you">
                             <label>Your phone number</label>
                             <input type="text" class="form-control">
-                        </div></br></br>
+                        </div></br><hr/></br>
 
                         <!--Payment details-->
-                        <b><i class="fas fa-credit-card"></i> Credit card information</b>
-                        <div class="form-group">
+                        <b data-toggle="tooltip" title="In the event you do not show up to your appointment, we will charge $5 to your credit card"><i class="fas fa-credit-card"></i> Credit card information</b>
+                        <p>In the event you do not show up to your appointment, we will charge a $5 fee to your credit card</p>
+                        <div class="form-group" data-toggle="tooltip" title="In the event you do not show up to your appointment, we will charge $5 to your credit card">
                             <label>Card number</label>
                             <input type="number" class="form-control">
                         </div>
                         <div class="row">
                             <div class="col-md-6">
-                                <div class="form-group">
+                                <div class="form-group" data-toggle="tooltip" title="In the event you do not show up to your appointment, we will charge $5 to your credit card">
                                     <label>3 digit security number</label>
                                     <input type="password" class="form-control">
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="form-group">
+                                <div class="form-group" data-toggle="tooltip" title="In the event you do not show up to your appointment, we will charge $5 to your credit card">
                                     <label>Experation date</label>
                                     <input type="date" class="form-control">
                                 </div>
                             </div>
                         </div>
-
-
                         <button type="button" class="btn btn-secondary btn-block">Submit</button>
                     </form>
                 </div>
