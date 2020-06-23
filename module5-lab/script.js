@@ -16,11 +16,9 @@ function validateForm(){
     var expressions = [
         //phone number exp
         /^\D?(\d{3})\D?\D?(\d{3})\D?(\d{4})$/,
-
         //credit card number exp
         /\b\d{4}[ -]?\d{4}[ -]?\d{4}[ -]?\d{4}\b/,
-
-        //security exp
+        //security number exp
         /^[0-9]{3}$/,
     ];
 
@@ -38,13 +36,14 @@ function validateForm(){
     }
 
     var alertTxt = "Invalid ";
-    //Alert user of errors
+    //Create alert
     for(var i = 0; i < results.length; i++){
         if(results[i] == false){
             alertTxt += types[i] + "; ";
         }
     }
 
+    //Alert user appropriately
     if(alertTxt != "Invalid "){
         alert(alertTxt);
     }
