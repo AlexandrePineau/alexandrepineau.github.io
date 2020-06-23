@@ -113,3 +113,5 @@ function setDates(date){
         return [true];
     }
 }
+
+$(selector).themes();
