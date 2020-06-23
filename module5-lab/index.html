@@ -1,21 +1,19 @@
+<!DOCTYPE html>
 <html>
     <head>
-        <title>SEG 3215 - Module 4</title>
-        <!--MY CSS LINK-->
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <!--MY JS LINK-->
-        <script src="script.js"></script>
+        <title>SEG 3215 - Module 5</title>
 
         <!--BOOTSTRAP CDN-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
         <!--ICON REPO-->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-        <!--BOOTSTRAP CDN-->
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        <!--Jquery UI-->
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+
+        <!--Jquery CDN-->
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+
+        <!--MY CSS LINK-->
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
         <!--Navbar-->
@@ -173,30 +171,36 @@
                                 <option>Tire puncture</option>
                             </select>
                         </div>
-                        <div class="form-group" data-toggle="tooltip" title="Do you have a favourite staff member?">
-                            <label>Do you care to have a particular employee serve you?</label>
-                            <select class="custom-select">
-                                <option></option>
-                                <option>No</option>
-                                <option>Alexandre</option>
-                                <option>Thomas</option>
-                                <option>Jim</option>
-                            </select>
-                        </div>
-                        <div class="form-group" data-toggle="tooltip" title="When are you available?">
-                            <label>Pick a date and time</label>
-                            <input type="datetime-local" class="form-control">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group" data-toggle="tooltip" title="Do you have a favourite staff member?">
+                                    <label>Do you care to have a particular employee serve you?</label>
+                                    <select class="custom-select" id="workers">
+                                        <option></option>
+                                        <option>No</option>
+                                        <option>Alexandre (works Tue, Thu-Fri)</option>
+                                        <option>Thomas (works Mon-Thu)</option>
+                                        <option>Jim (works Tues-Fri)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group" data-toggle="tooltip" title="When are you available?">
+                                    <label>Pick a date for you appointment</label>
+                                    <input type="text" id="datepicker" class="form-control">
+                                </div>
+                            </div>
                         </div></br><hr/></br>
 
                         <!--Custommer details-->
                         <b><i class="fas fa-user"></i> Your information</b>
                         <div class="form-group" data-toggle="tooltip" title="So we know who to expect">
                             <label>Your full name</label>
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" placeholder="Firstname Lastname">
                         </div>
                         <div class="form-group" data-toggle="tooltip" title="In case we need to call you">
                             <label>Your phone number</label>
-                            <input type="text" id="phone" class="form-control">
+                            <input type="text" id="phone" class="form-control" placeholder="333 333 4444">
                         </div></br><hr/></br>
 
                         <!--Payment details-->
@@ -204,13 +208,13 @@
                         <p>In the event you do not show up to your appointment, we will charge a $5 fee to your credit card</p>
                         <div class="form-group" data-toggle="tooltip" title="In the event you do not show up to your appointment, we will charge $5 to your credit card">
                             <label>Card number</label>
-                            <input type="text" id="credit" class="form-control">
+                            <input type="text" id="credit" class="form-control" placeholder="4444 4444 4444 4444">
                         </div>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group" data-toggle="tooltip" title="In the event you do not show up to your appointment, we will charge $5 to your credit card">
                                     <label>3 digit security number</label>
-                                    <input type="password" id="security" class="form-control">
+                                    <input type="password" id="security" class="form-control" placeholder="333">
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -247,7 +251,20 @@
         </div></br></br>
 
         <!--IMAGE SOURCES
-        bicycle: https://www.pinterest.ca/pin/421297740113374855/
+            bicycle: https://www.pinterest.ca/pin/421297740113374855/
         -->
+
+        <!--JQ CDN-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <!--JQ UI CDN-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+        <!--BOOTSTRAP CDN-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+        <!--MY JS LINK-->
+        <script src="script.js"></script>
     </body>
 </html>

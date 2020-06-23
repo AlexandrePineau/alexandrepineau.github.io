@@ -4,7 +4,6 @@
     Credit card number: https://stackoverflow.com/questions/10246242/basic-regex-for-16-digit-numbers
     Security number: https://www.regular-expressions.info/numericranges.html
 */
-
 //Validates booking form
 function validateForm(){
     var numbers = [
@@ -58,4 +57,33 @@ function checkNum(num, expression){
         return true;
     }
     return false;
+}
+
+//JQuery datepicker config
+$(function(){
+    $( "#datepicker" ).datepicker({
+        minDate: 1,
+        maxDate: '+1Y',
+        beforeShowDay: setDates,
+    });
+});
+
+//Disables appropriate days in datepicker based off of worker chosen
+function setDates(date){
+    var worker = $("#workers").val();
+    if(date.getDay() == 0 || date.getDay() == 6){
+        return [false];
+    }
+    if((date.getDay() == 1 || date.getDay() == 3) && worker == "Alexandre (works Tue, Thu-Fri)"){
+        return [false];
+    }
+    if(date.getDay() == 5 && worker == "Thomas (works Mon-Thu)"){
+        return [false];
+    }
+    if(date.getDay() == 1 && worker == "Jim (works Tues-Fri)"){
+        return [false];
+    }
+    else{
+        return [true];
+    }
 }
