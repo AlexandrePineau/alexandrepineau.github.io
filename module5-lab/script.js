@@ -42,6 +42,22 @@ function validateForm(){
         }
     }
 
+    if($("#servicelist").val() == ""){
+        alertTxt += "service selection; ";
+    }
+
+    if($("#datepicker").val() == ""){
+        alertTxt += "date; "
+    }
+
+    if($("#fullname").val() == ""){
+        alertTxt += "name; "
+    }
+
+    if($("#creditcard").val() == ""){
+        alertTxt += "expiry date; "
+    }
+
     //Alert user appropriately
     if(alertTxt != "Invalid "){
         alert(alertTxt);
@@ -59,12 +75,22 @@ function checkNum(num, expression){
     return false;
 }
 
-//JQuery datepicker config
+//JQuery datepicker config for appointment
 $(function(){
     $( "#datepicker" ).datepicker({
         minDate: 1,
         maxDate: '+1Y',
         beforeShowDay: setDates,
+    });
+});
+
+//JQuery datepicker config for credit card
+$(function(){
+    $( "#creditcard" ).datepicker({
+        minDate: 1,
+        changeMonth: true,
+            changeYear: true,
+        dateFormat: "mm/yy"
     });
 });
 
