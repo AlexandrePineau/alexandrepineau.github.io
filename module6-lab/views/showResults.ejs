@@ -1,0 +1,53 @@
+<html lang="en-US">
+<head>
+    <title>Survey Analysis</title>
+</head>
+
+<body>
+    <h1>Survey analysis</h1>
+
+    <h2>Closed questions</h2>
+        <h3>Had good colour</h3>
+        <ul>
+        <% for (var i=0; i<results[0].length; i++){ %>
+            <li><%= results[0][i].goodColour %> :  <%= results[0][i].count %></li>
+        <% } %>
+        </ul>
+
+        <h3>Most prominent design goal</h3>
+        <ul>
+        <% for (var i=0; i<results[1].length; i++){ %>
+            <li><%= results[1][i].goal %> :  <%= results[1][i].count %></li>
+        <% } %>
+        </ul>
+
+        <h3>Worst design goal</h3>
+        <ul>
+        <% for (var i=0; i<results[2].length; i++){ %>
+            <li><%= results[2][i].goal %> :  <%= results[2][i].count %></li>
+        <% } %>
+        </ul>
+
+        <h3>Was tasteful</h3>
+        <ul>
+        <% for (var i=0; i<results[3].length; i++){ %>
+            <li><%= results[3][i].tasteful %> :  <%= results[3][i].count %></li>
+        <% } %>
+        </ul>
+
+
+    <h2>Open questions</h2>
+        <h3>First impressions</h3>
+        <ul>
+            <% for (var i=0; i<results[4].length; i++){ %>
+                <li><%= results[4][i].impression %> :  <%= results[4][i].count %></li>
+            <% } %>
+        </ul>
+        <h3>Comments</h3>
+        <ul>
+            <% for (var i=0; i<results[5].length; i++){ %>
+                <li><%= results[5][i].comment %> :  <%= results[5][i].count %></li>
+            <% } %>
+        </ul>
+</body>
+</html>
