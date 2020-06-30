@@ -42,14 +42,14 @@ module.exports = function(app){
     // when a user goes to localhost:3000/analysis
     // serve a template (ejs file) which will include the data from the data files
     app.get('/analysis', function(req, res){
-        var goodColour = readData("goodColour");
+        var colour = readData("goodColour");
         var bestGoal = readData("bestGoal");
         var worstGoal = readData("worstGoal");
-        var isTasteful = readData("isTasteful");
+        var tasteful = readData("tasteful");
         var impression = readData("impression");
         var comments = readData("comments");
-        res.render('showResults', {results: [goodColour, bestGoal, worstGoal, isTasteful, impression, comments]});
-        console.log([goodColour, bestGoal, worstGoal, isTasteful, impression, comments]);
+        res.render('showResults', {results: [colour, bestGoal, worstGoal, tasteful, impression, comments]});
+        console.log([colour, bestGoal, worstGoal, tasteful, impression, comments]);
     });
 
     // when a user goes to localhost:3000/niceSurvey
@@ -67,7 +67,7 @@ module.exports = function(app){
         for (var key in json){
             console.log(key + ": " + json[key]);
             // in the case of checkboxes, the user might check more than one
-            if (key === "worstGoal"){
+            if ((key === "worstGoal") && (json[key].length === 2)){
                 for (var item in json[key]){
                     combineCounts(key, json[key][item]);
                 }

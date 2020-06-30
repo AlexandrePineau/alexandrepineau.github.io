@@ -1,8 +1,12 @@
 <html>
     <head>
         <title>SEG 3125 - Module 6</title>
-        <!--BOOTSTRAP CDN-->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+         <!-- Style sheet (CSS) and JavaScript scripts necessary to use Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     </head>
     <body>
         <!--Header-->
@@ -19,23 +23,23 @@
         <div class="jumbotron bg-secondary p-3 m-4">
             <div class="row">
                 <div class="col-md-6">
-                    <a href="https://bitcoin.org/en/" title="Visit their website" target="_blank"><img class="mx-auto d-block img-fluid" src="images/Preview.PNG"></a>
+                    <a href="https://bitcoin.org/en/" title="Visit their website" target="_blank"><img class="mx-auto d-block img-fluid" src="assets/images/Preview.PNG"></a>
                 </div>
                 <div class="col-md-6">
-                    <a href="https://bitcoin.org/en/" title="Visit their website" target="_blank"><img class="mx-auto d-block img-fluid" src="images/Preview2.PNG"></a>
+                    <a href="https://bitcoin.org/en/" title="Visit their website" target="_blank"><img class="mx-auto d-block img-fluid" src="assets/images/Preview2.PNG"></a>
                 </div>
             </div>
         </div>
 
         <!--The form-->
         <div class="jumbotron bg-muted p-3 m-4">
-            <form id="survey">
+            <form>
                 <h1>The Survey</h1></br>
             <div class="row">
                 <div class="col-md-4">
                     <!--Question 1-->
                     <label for="overview"><span style="font-weight: bold;">1. </span>Briefly describe your impression of this website</label></br>
-                    <textarea id="overview" rows="8" cols="40"></textarea></br></br>
+                    <textarea name="impression" id="overview" rows="8" cols="40"></textarea></br></br>
                     <!--Question 2-->
                     <p><span style="font-weight: bold;">2. </span>Do you like the colour choices of this website?</p>
                     <label for="yes" style="margin-left: 10px; margin-right: 10px">Yes</label>
@@ -47,7 +51,7 @@
                 <div class="col-md-4">
                     <!--Question 3-->
                     <label for="goals"><span style="font-weight: bold;">3. </span>Of the listed UI design goals, which one is most predominant on Bitcoin's website?</label></br>
-                    <select id="goals" name="goals">
+                    <select id="goals" name="bestGoal">
                         <option value="functionality">Functionality</option>
                         <option value="coherence">Coherence</option>
                         <option value="efficiency">Efficiency</option>
@@ -60,27 +64,27 @@
                     <table class="boxes">
                         <tr>
                             <td> <label for="functionality">Functionality</label>
-                            <td><input type="checkbox" id="functionality" value="functionality"></td>
+                            <td><input name="worstGoal" type="checkbox" id="functionality" value="functionality"></td>
                         </tr>
                         <tr>
                             <td><label for="coherence">Coherence</label></td>
-                            <td><input type="checkbox" id="coherence" value="coherence"></td>
+                            <td><input name="worstGoal" type="checkbox" id="coherence" value="coherence"></td>
                         </tr>
                         <tr>
                             <td><label for="efficiency">Efficiency</label></td>
-                            <td><input type="checkbox" id="efficiency" value="efficiency"></td>
+                            <td><input name="worstGoal" type="checkbox" id="efficiency" value="efficiency"></td>
                         </tr>
                         <tr>
                             <td><label for="usability">Usability</label></td>
-                            <td><input type="checkbox" id="usability" value="usability"></td>
+                            <td><input name="worstGoal" type="checkbox" id="usability" value="usability"></td>
                         </tr>
                         <tr>
                             <td><label for="reliability">Reliability</label></td>
-                            <td><input type="checkbox" id="reliability" value="reliability"></td>
+                            <td><input name="worstGoal" type="checkbox" id="reliability" value="reliability"></td>
                         </tr>
                         <tr>
                             <td><label for="dataIntegrity">Data Integrity</label></td>
-                            <td><input type="checkbox" id="dataIntegrity" value="dataIntegrity"></td>
+                            <td><input name="worstGoal" type="checkbox" id="dataIntegrity" value="dataIntegrity"></td>
                         </tr>
                     </table></br></br>
                 </div>
@@ -88,26 +92,26 @@
                 <div class="col-md-4">
                     <!--Question 5-->
                     <label for="comments"><span style="font-weight: bold;">5. </span>Place any additional comments below</label></br>
-                    <textarea id="comments" rows="8" cols="40"></textarea></br></br>
+                    <textarea id="comments" name="comments" rows="8" cols="40"></textarea></br></br>
                     <!--Question 6-->
                     <p><span style="font-weight: bold;">6. </span>To what degree do you agree with the following statement? </br>
                     "Overall, I find this website to be tasteful"</p>
                     <table class="boxes">
                         <tr>
                             <td><label for="stronglyagree">Strongly Agree</label></td>
-                            <td><input type="radio" id="stronglyagree" value="stronglyagree" name="taste"></td>
+                            <td><input type="radio" id="stronglyagree" value="strongly agree" name="tasteful"></td>
                         </tr>
                         <tr>
                             <td><label for="agree">Agree</label></td>
-                            <td><input type="radio" id="agree" value="agree" name="taste"></td>
+                            <td><input type="radio" id="agree" value="agree" name="tasteful"></td>
                         </tr>
                         <tr>
                             <td><label for="disagree">Disagree</label></td>
-                            <td><input type="radio" id="disagree" value="disagree" name="taste"></td>
+                            <td><input type="radio" id="disagree" value="disagree" name="tasteful"></td>
                         </tr>
                         <tr>
                             <td><label for="stronglydisagree">Strongly Disagree</label></td>
-                            <td><input type="radio" id="stronglydisagree" value="stronglydisagree" name="taste"></td>
+                            <td><input type="radio" id="stronglydisagree" value="strongly disagree" name="tasteful"></td>
                         </tr>
                     </table></br></br>
                 </div>
@@ -123,13 +127,6 @@
                 Alexandre Pineau - 300066713
             </p>
         </footer>
-
-        <!--JQ CDN-->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-        <!--BOOTSTRAP CDN-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
         <script src="/assets/action.js"></script>
     </body>
