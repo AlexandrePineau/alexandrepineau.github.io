@@ -2,17 +2,7 @@ import React from 'react';
 
 export const Home = () => (
     <div>
-        <h1>
-            <u>Alpha Web Design <i class="fas fa-pencil-alt"></i></u>
-        </h1>
-
-        <nav>
-            <a href="/">Home</a> |
-            <a href="/services">Our services</a> |
-            <a href="/gallery">Gallery</a> |
-            <a href="/bookings">Bookings</a> |
-            <a href="/contact">Contact</a>
-        </nav><br /><br />
+        <div className="container">
 
         <h2 id="home">~Home~</h2>
         <h3>
@@ -27,6 +17,7 @@ export const Home = () => (
         <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ornare risus pulvinar,   auctor velit          non, pulvinar metus. Sed finibus ut elit vestibulum lobortis. Class     aptent taciti sociosqu ad litora            torquent per conubia nostra, per inceptos   himenaeos. Pellentesque finibus dolor id rutrum luctus. Integer       scelerisque scelerisque     tellus quis cursus. Nullam viverra facilisis arcu. Mauris convallis arcu id      rutrum     rutrum.
         </p>
+        </div>
     </div>
 )
 

@@ -8,10 +8,13 @@ import { Bookings } from './Bookings';
 import { Contact } from './Contact';
 import { NotFound } from './NotFound';
 
+import { NavBar } from './NavBar';
+
 function App() {
   return (
     <div className="App">
       <Router>
+        <NavBar/>
         <Switch>
           <Route exact path="/" component={Home}/>
           <Route path="/services" component={Services} />
