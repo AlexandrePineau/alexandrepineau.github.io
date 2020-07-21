@@ -3,8 +3,7 @@ import React from 'react';
 export const NavBar = () => (
     <div>
         <div className="container">
-            <nav class="navbar navbar-expand-sm bg-light">
-                <ul class="navbar-nav">
+                <ul class="nav nav-fill">
                     <li class="nav-item">
                         <a class="nav-link" href="/">Home</a>
                     </li>
@@ -21,13 +20,11 @@ export const NavBar = () => (
                         <a class="nav-link" href="/contact">Contact</a>
                     </li>
                 </ul>
-            </nav>
         </div>
         <div className="container">
             <h1>
                 <u>Alpha Web Design <i class="fas fa-pencil-alt"></i></u>
             </h1>
         </div>
-        <br/>
     </div>
 )
