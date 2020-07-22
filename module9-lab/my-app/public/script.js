@@ -1,3 +1,0 @@
-function showMe(){
-    alert("yes");
-}

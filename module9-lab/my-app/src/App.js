@@ -7,6 +7,7 @@ import { Gallery } from './Gallery';
 import { Bookings } from './Bookings';
 import { Contact } from './Contact';
 import { NotFound } from './NotFound';
+import { ChezNous } from './ChezNous';
 
 import { NavBar } from './NavBar';
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="/gallery" component={Gallery} />
           <Route path="/bookings" component={Bookings} />
           <Route path="/contact" component={Contact} />
+          <Route path="/chezNous" component={ChezNous} />
           <Route component={NotFound} />
         </Switch>
       </Router>
