@@ -5,7 +5,7 @@ export const Home = () => (
         <div className="container">
             <div className="row p-5 mt-3 mb-3 border border-primary bg-grey">
                 <div className="col-lg-3">
-                    <h2 class="display-3">
+                    <h2 className="display-3">
                         Who we are
                     </h2>
                 </div>
@@ -48,7 +48,7 @@ export const Home = () => (
                     </ul>
                 </div>
                 <div className="col-lg-3">
-                    <h2 class="display-3">
+                    <h2 className="display-3">
                         Our vision
                     </h2>
                 </div>
