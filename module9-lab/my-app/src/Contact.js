@@ -7,8 +7,8 @@ export const Contact = () => (
             <h3>Street adress</h3>
             <p>
                 123 MacDonald Road <br />
-                                Waterdown, Ontario <br />
-                                A0A 0A0 <br />
+                Waterdown, Ontario <br />
+                A0A 0A0 <br />
             </p>
 
             <h3>Hours</h3>
