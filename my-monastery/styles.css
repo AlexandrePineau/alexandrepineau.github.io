@@ -14,6 +14,20 @@ body {
   margin-top: 10px;
 }
 
+.nav-item {
+  margin-left: 12px;
+}
+
+
+/* Title
+-------------------------------------------------- */
+#monasteryTitle {
+  font-family: 'Times New Roman', serif;
+  padding-top: 80px;
+  text-align: center;
+  font-size: 70px;
+}
+
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 
@@ -29,6 +43,12 @@ body {
 .carousel-caption {
   bottom: 3rem;
   z-index: 10;
+  background: rgba(0, 0, 0, .5);
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Declare heights because of positioning of img element */
@@ -72,6 +92,26 @@ body {
 /* rtl:begin:remove */
 .featurette-heading {
   letter-spacing: -.05rem;
+}
+
+.lead {
+  text-indent: 40px;
+}
+
+.lead-li {
+  text-indent: 0px;
+}
+
+.custom-table, td, th{ 
+  border: 1px solid black;
+}
+
+.custom-table th{ 
+  text-align: center;
+}
+
+.bibliography-list li {
+  margin-top: 15px;
 }
 
 /* rtl:end:remove */
