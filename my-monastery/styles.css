@@ -110,6 +110,10 @@ body {
   text-align: center;
 }
 
+#schedule {
+  table-layout: fixed;
+}
+
 .bibliography-list li {
   margin-top: 15px;
 }
